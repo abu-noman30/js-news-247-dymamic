@@ -37,7 +37,7 @@
             <div class="flex-1">
               <a class="btn btn-ghost normal-case text-xl"
                 ><span
-                  class="text-2xl font-bold text-gray-900 md:text-4xl lg:text-5xl"
+                  class="text-2xl font-extrabold text-gray-900 md:text-4xl lg:text-5xl"
                   >news</span
                 ><span
                   class="text-xl font-semibold md:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
@@ -48,8 +48,12 @@
             <div class="flex-none gap-2">
               <div class="form-control">
                 <label class="">
-                  <button class="btn btn-active btn-link">News</button>
-                  <button class="btn btn-link text-neutral-400">Blog</button>
+                  <button class="btn btn-active btn-link font-bold">
+                    News
+                  </button>
+                  <button class="btn btn-link text-neutral-400 font-bold">
+                    Blog
+                  </button>
                 </label>
               </div>
 
@@ -68,7 +72,7 @@
       <section class="menu-section">
         <div class="container mx-auto">
           <ul
-            class="bg-base-100 rounded-box text-center grid col-2 gap-2 lg:flex lg:items-center lg:justify-between text-sm lg:text-lg font  bg-neutral-100 py-5"
+            class="bg-base-100 rounded-box text-center grid col-2 gap-2 lg:flex lg:items-center lg:justify-between text-sm lg:text-lg font bg-neutral-100 py-5"
           >
             <li><button class="btn btn-ghost text-zinc-500">Button</button></li>
             <li><button class="btn btn-ghost text-zinc-500">Button</button></li>
@@ -86,8 +90,8 @@
 
       <!-- Items counter section -->
       <section class="items-counter-section px-8 sm:px-16">
-        <div class=" bg-white text-center">
-          <h1 class="py-4 font-semibold break-words text-sm sm:text-lg ">
+        <div class="bg-white text-center">
+          <h1 class="py-4 font-semibold break-words text-sm sm:text-lg">
             <span> 4 </span> items found for category Entertainment
           </h1>
         </div>
@@ -96,7 +100,7 @@
       <!-- Sort by view section -->
       <section class="sort-by-view-section mb-4">
         <div
-          class="container mx-auto text-center sm:flex sm:items-center sm:justify-between  px-8 py-4"
+          class="container mx-auto text-center sm:flex sm:items-center sm:justify-between px-8 py-4"
         >
           <!-- dropdown key -->
           <div class="dropdown-key z-50">
@@ -118,10 +122,6 @@
                       />
                     </svg>
                   </a>
-                  <ul class="p-2 bg-base-100">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                  </ul>
                 </li>
               </ul>
             </div>
@@ -197,23 +197,24 @@
               <img
                 src="https://placeimg.com/200/280/arch"
                 alt="Movie"
-                class="rounded-lg h-48 w-full object-cover md:h-full md:w-48"
+                class="rounded-lg h-48 w-full object-cover md:h-80 lg:h-full"
               />
             </figure>
             <div class="card-body">
               <h2 class="card-title">New movie is released!</h2>
               <p>Click the button to watch on Jetflix app.</p>
               <p>Click the button to watch on Jetflix app.</p>
-              <div class="card-actions justify-between items-center">
-                <div class="flex flex-row items-center justify-center">
+              <p>Click the button to watch on Jetflix app.</p>
+              <div class=" flex flex-wrap justify-center sm:justify-between items-center text-center">
+                <div class="flex flex-col sm:flex-row items-center justify-center">
                   <img
                     src="https://unavatar.now.sh/twitter/itsmarkmead"
                     alt="Mark Mead"
-                    class="w-full h-16 rounded-full"
+                    class="w-16 h-16 rounded-full mx-auto"
                   />
-                  <div class="mx-4">
-                    <h2 class="font-semibold">Name......................</h2>
-                    <h3 class="text-slate-500">Date...................</h3>
+                  <div class="mx-4 text-center ">
+                    <h2 class="font-semibold">Name</h2>
+                    <h3 class="text-slate-500">Date</h3>
                   </div>
                 </div>
                 <h1>
@@ -248,7 +249,7 @@
                     class="mask mask-star-2 bg-orange-400"
                   />
                 </div>
-                <button class="text-indigo-500">
+                <button class="text-indigo-500 ml-5 md:ml-0">
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
@@ -361,7 +362,9 @@
             <div class="details-container border-4 border-slate-600">
               <!-- Card details -->
               <div class="card card-compact w-full p-4 bg-base-100 shadow-xl">
-                <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                <figure>
+                  <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+                </figure>
                 <div class="card-body">
                   <h2 class="card-title">Shoes!</h2>
                   <p>If a dog chews shoes whose shoes does he choose?</p>
