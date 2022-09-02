@@ -15,12 +15,16 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <!-- Font Awesome  -->
+    <script src="https://kit.fontawesome.com/c5733fe81c.js" crossorigin="anonymous"></script>
+
   </head>
   <body class="bg-neutral-100">
     <header>
       <!-- Navbar section -->
       <section class="navbar-section">
-        <div class="container mx-auto ">
+        <div class="container mx-auto">
           <div class="navbar bg-neutral-100">
             <div class="flex-1">
               <a class="btn btn-ghost normal-case text-xl">news247</a>
@@ -46,9 +50,9 @@
 
       <!-- Menu items section -->
       <section class="menu-section">
-        <div class="container mx-auto ">
+        <div class="container mx-auto">
           <ul
-            class="bg-base-100 rounded-box flex items-center justify-center gap-8 bg-neutral-100"
+            class="bg-base-100 rounded-box flex items-center justify-center gap-8 bg-neutral-100 py-5"
           >
             <li><button class="btn btn-ghost text-zinc-500">Button</button></li>
           </ul>
@@ -57,41 +61,98 @@
 
       <!-- Items counter section -->
       <section class="items-counter-section px-36">
-        <div class="container mx-auto bg-white text-center ">
-          <h1 class="py-4 font-semibold"><span> 4 </span> items found for category Entertainment</h1>
+        <div class="container mx-auto bg-white text-center">
+          <h1 class="py-4 font-semibold">
+            <span> 4 </span> items found for category Entertainment
+          </h1>
+        </div>
+      </section>
+
+      <!-- Sort by view section -->
+      <section class="sort-by-view-section px-36">
+        <div class="container mx-auto flex items-center justify-between sm:text-center py-4">
+          <!-- dropdown key -->
+          <div class="dropdown-key">
+            <h2 class="inline font-semibold">Sort By View:</h2>
+            <div class="flex-none inline bg-white py-1 mx-2">
+              <ul class="menu menu-horizontal p-0">
+                <li tabindex="0">
+                  <a class="text-slate-400">
+                    Default
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                      />
+                    </svg>
+                  </a>
+                  <ul class="p-2 bg-base-100">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- trending btn -->
+          <div>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded-md">
+              Today’s Pick
+            </button>
+            <button
+              class="border-2 border-primary text-indigo-500 px-4 py-1.5 rounded-md"
+            >
+              Trending
+            </button>
+          </div>
         </div>
       </section>
     </header>
 
-    <!-- Sort by view section -->
-    <section class="sort-by-view-section px-36">
-      <div class="container mx-auto flex justify-between py-4">
-        <!-- dropdown key -->
-        <div class="dropdown-key">
-         <h2 class="inline font-semibold">Sort By View:</h2>
-         <div class="flex-none inline bg-white py-1 mx-2">
-          <ul class="menu menu-horizontal p-0">
-            <li tabindex="0">
-              <a class="text-slate-400">
-                Default
-                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-              </a>
-              <ul class="p-2 bg-base-100">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </li>
-          </ul>
+    <main>
+      <!-- News section -->
+      <section class="news-section">
+        <div class="container w-8/12 mx-auto ">
+          <!-- card-news-1 -->
+          <div class="card lg:card-side bg-base-100 shadow-xl my-6 p-4">
+            <figure><img src="https://placeimg.com/200/280/arch" alt="Movie" class="rounded-lg h-48 w-full object-cover md:h-full md:w-48"></figure>
+            <div class="card-body">
+              <h2 class="card-title">New movie is released!</h2>
+              <p>Click the button to watch on Jetflix app.</p>
+              <p>Click the button to watch on Jetflix app.</p>
+              <div class="card-actions justify-between items-center">
+                <div class="flex flex-row items-center justify-center ">
+                  <img
+                    src="https://unavatar.now.sh/twitter/itsmarkmead"
+                    alt="Mark Mead"
+                    class="w-full h-16 rounded-full"
+                  />
+                 <div class="mx-4">
+                  <h2 class="font-semibold">Name......................</h2>
+                  <h3 class="text-slate-500">Date...................</h3>
+                 </div>
+                </div> 
+                <h1><i class="fa-regular fa-eye"></i> <span class="font-semibold">1.5M</span></h1>
+                <div class="rating rating-sm">
+                  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <button class="text-indigo-500"><i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-
-        <!-- trending btn -->
-        <div>
-          <button class="bg-indigo-500 text-white px-4 py-2 rounded-md">Today’s Pick</button>
-          <button class="border-2 border-primary text-indigo-500 px-4 py-1.5 rounded-md">Trending</button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- daisyui JS -->
     <script src="https://cdn.tailwindcss.com"></script>
