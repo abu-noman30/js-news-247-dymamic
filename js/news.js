@@ -39,16 +39,14 @@ const fetchNewsData = async (category_id ,category_name) => {
 
 const displayCatagoryWiseNews = (newsData, category_name) => {
   // console.log(newsData);
-  // console.log(newsData[0].total_view);
   // console.log(category_name);
 
   // Default News Data sort by total_view
-  if (newsData.length === 26 && category_name === 'All News') {
     newsData.sort((a, b) => {
       return b.total_view - a.total_view;
     });
-    console.log(newsData);
-  }
+    // console.log(newsData);
+
 
   document.querySelector('#item-counter').innerHTML = `${newsData.length}`;
   document.querySelector('#catagory-name').innerHTML = `${category_name}`;
@@ -207,6 +205,6 @@ const handlerOnClickBlogBtn = () => {
 };
 
  
-fetchMenuItemsData('');
+fetchMenuItemsData();
 
-defaultNewsDataBySort('08', 'All News');
+defaultNewsDataBySort('01', 'Breaking News');
