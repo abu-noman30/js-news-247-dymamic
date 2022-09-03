@@ -37,6 +37,8 @@ const fetchNewsData = async (category_id,category_name) => {
 const displayCatagoryWiseNews = (newsData,category_name) => {
     // console.log(newsData);
     // console.log(category_name);
+    document.querySelector('#item-counter').innerHTML = `${newsData.length}`;
+    document.querySelector('#catagory-name').innerHTML = `${category_name}`;
 
   const targetNotFoundSec = document.querySelector('#not-found-section');
   const targetNewsContainer = document.querySelector('#news-container');
@@ -52,7 +54,7 @@ const displayCatagoryWiseNews = (newsData,category_name) => {
       _id,
       title,
       total_view,
-      author: { name, published_date },
+      author: { name, published_date,img },
       thumbnail_url,
       details,
     } = news;
@@ -77,7 +79,7 @@ const displayCatagoryWiseNews = (newsData,category_name) => {
         <div class=" flex flex-wrap justify-center sm:justify-between items-center text-center">
           <div class="flex flex-col sm:flex-row items-center justify-center">
             <img
-              src="https://unavatar.now.sh/twitter/itsmarkmead"
+              src="${img}"
               alt="Mark Mead"
               class="w-16 h-16 rounded-full mx-auto"
             />
@@ -174,4 +176,4 @@ const displayNewsDetailsOnModal = (newsDetailsData) => {
     
 };
 
-fetchMenuItemsData('');
+fetchMenuItemsData();
