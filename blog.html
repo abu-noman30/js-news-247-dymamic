@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <title>news247</title>
 
     <!-- Tailwind CSS -->
@@ -50,12 +50,12 @@
               <div class="form-control">
                 <label class="">
                   <button
-                    class="btn btn-active btn-link font-bold"
+                    class=" btn btn-link text-neutral-400 font-bold"
                     onclick="handlerOnClickNewsBtn()"
                   >
                     News
                   </button>
-                  <button class="btn btn-link text-neutral-400 font-bold">
+                  <button class="btn btn-active btn-link font-bold">
                     Blog
                   </button>
                 </label>
@@ -218,41 +218,25 @@
               <p
                 class="px-16 mt-4 leading-relaxed text-gray-700 font-normal text-base break-words"
               >
-                <b>2. this keyword:</b> <br />
-                1. Regular functions have their own dynamic this binding, while
-                arrow functions do not have their own this.The value of this
-                inside a regular function depends on how the function is
-                invoked.During a simple invocation the value of this equals to
-                the global object (or undefined if the function runs in strict
-                mode) <br /><br />
-                2. The value of this inside an arrow function remains the same
-                throughout the lifecycle of the function and is always bound to
-                the value of this in the closest non-arrow parent function.
+                <b>2. this keyword:</b> <br>
+               1.  Regular functions have their own dynamic this binding, while arrow functions do not have their own this.The value of this inside a regular function depends on how the function is invoked.During a simple invocation the value of this equals to the global object (or undefined if the function runs in strict mode) <br><br>
+               2.  The value of this inside an arrow function remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.
               </p>
               <p
                 class="px-16 mt-4 leading-relaxed text-gray-700 font-normal text-base break-words"
               >
-                <b>3. Arguments object:</b> <br />
-                1. Inside the body of a regular function, arguments is a special
-                array-like object containing the list of arguments with which
-                the function has been invoked. <br /><br />
-                2. No arguments object is defined inside an arrow function. The
-                arguments object is resolved lexically: the arrow function
-                accesses arguments from the closest outer non-arrow function.
+                <b>3. Arguments object:</b> <br>
+                1.  Inside the body of a regular function, arguments is a special array-like object containing the list of arguments with which the function has been invoked. <br><br>
+                2. No arguments object is defined inside an arrow function. The arguments object is resolved lexically: the arrow function accesses arguments from the closest outer non-arrow function.
               </p>
               <p
                 class="px-16 mt-4 leading-relaxed text-gray-700 font-normal text-base break-words"
               >
-                <b>4. new keyword:</b>
-                1. Regular functions created using function declarations or
-                expressions are constructible (means that we can use regular
-                functions as constructors) and callable. And since regular
-                functions are constructible, they can be called using the new
-                keyword. <br /><br />
-                2. The arrow functions are only callable and not constructible,
-                i.e arrow functions can never be used as constructor functions.
-                Hence, they can never be called with the new keyword.
+                <b>4. new keyword:</b> 
+                1.  Regular functions created using function declarations or expressions are constructible (means that we can use regular functions as constructors) and callable. And since regular functions are constructible, they can be called using the new keyword. <br><br>
+                2. The arrow functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions. Hence, they can never be called with the new keyword.
               </p>
+              
             </details>
 
             <!-- Question 3 -->
@@ -292,7 +276,7 @@
                 class="px-16 mt-4 leading-relaxed text-gray-700 font-normal text-base break-words"
               >
                 <b>1. forEach():</b>
-                <ul class="list-decimal p-4">
+                <ul class="list-decimal p-4 ">
                   <li>
                     The forEach() method does not create a new array based on
                     the given array.
@@ -310,7 +294,7 @@
                 class="px-16 mt-4 leading-relaxed text-gray-700 font-normal text-base break-words"
               >
                 <b>2. .map() :</b>
-                <ul class="list-decimal p-4">
+                <ul class="list-decimal p-4 ">
                   <li>The map() method creates an entirely new array.</li>
                   <li>
                     The map() method returns the newly created array according
@@ -329,7 +313,7 @@
                 class="px-16 mt-4 leading-relaxed text-gray-700 font-normal text-base break-words"
               >
                 <b>3. .filter() :</b>
-                <ul class="list-decimal p-4">
+                <ul class="list-decimal p-4 ">
                   <li>
                     The filter() method returns a new array of filter elements
                     that meet a certain condition.
@@ -350,7 +334,7 @@
                 class="px-16 mt-4 leading-relaxed text-gray-700 font-normal text-base break-words"
               >
                 <b>4. .reduce() :</b>
-                <ul class="list-decimal p-4">
+                <ul class="list-decimal p-4 ">
                   <li>
                     The reduce() method executes a reducer function (that you
                     provide) on each element of the array, resulting in a single
@@ -375,22 +359,18 @@
                 class="px-16 mt-4 leading-relaxed text-gray-700 font-normal text-base break-words"
               >
                 <b>4. .find() :</b>
-                <ul class="list-decimal p-4">
+                <ul class="list-decimal p-4 ">
                   <li>
-                    The find() method returns the value of the first element
-                    that passes a test.
+                    The find() method returns the value of the first element that passes a test.
                   </li>
                   <li>
-                    The find() method executes a function for each array
-                    element.
+                    The find() method executes a function for each array element.
                   </li>
                   <li>
-                    The find() method returns undefined if no elements are
-                    found.
+                    The find() method returns undefined if no elements are found.
                   </li>
                   <li>
-                    The find() method does not execute the function for empty
-                    elements.
+                    The find() method does not execute the function for empty elements.
                   </li>
                   <li>It does not change the original array.</li>
                 </ul>
