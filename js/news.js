@@ -1,4 +1,5 @@
 const fetchMenuItemsData = async () => {
+  document.querySelector('#spinner-section').classList.remove('hidden');
   try {
     let url = 'https://openapi.programming-hero.com/api/news/categories';
     let res = await fetch(url);
@@ -16,14 +17,16 @@ const displaymenuItems = (menuItemsData) => {
   menuItemsData.forEach((menuItem) => {
     const { category_id, category_name } = menuItem;
 
+    document.querySelector('#spinner-section').classList.add('hidden');
     const menuItemsList = document.createElement('li');
     menuItemsList.innerHTML = `<button class="btn btn-ghost text-zinc-500" onclick='fetchNewsData("${category_id}","${category_name}")'>${category_name}</button>`;
-
+    document.querySelector('#spinner-section').classList.add('hidden');
     targetMenuBar.appendChild(menuItemsList);
   });
 };
 
 const fetchNewsData = async (category_id, category_name) => {
+  document.querySelector('#spinner-section').classList.remove('hidden');
   try {
     let url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     let res = await fetch(url);
@@ -54,6 +57,7 @@ const displayCatagoryWiseNews = (newsData, category_name) => {
   const targetNewsContainer = document.querySelector('#news-container');
   targetNewsContainer.innerHTML = '';
   if (newsData.length === 0) {
+    document.querySelector('#spinner-section').classList.add('hidden');
     targetNotFoundSec.classList.remove('hidden');
     return;
   }
@@ -140,11 +144,13 @@ const displayCatagoryWiseNews = (newsData, category_name) => {
       </div>
     </div>`;
 
+    document.querySelector('#spinner-section').classList.add('hidden');
     targetNewsContainer.appendChild(newsDiv);
   });
 };
 
 const fetchNewsDetailsData = async (news_id) => {
+  
   try {
     let url = `https://openapi.programming-hero.com/api/news/${news_id}`;
     let res = await fetch(url);
@@ -196,6 +202,11 @@ const defaultNewsDataBySort = (categoryId, categoryName) => {
   fetchNewsData(categoryId, categoryName);
 };
 
+const handlerOnClickBlogBtn = () => {
+    window.location.href = "blog.html";
+};
+
+ 
 fetchMenuItemsData('');
 
 defaultNewsDataBySort('08', 'All News');

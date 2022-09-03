@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news247</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- daisyui CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Flowbite CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+
+    <!-- Font Awesome  -->
+    <script
+      src="https://kit.fontawesome.com/c5733fe81c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-neutral-100">
+    <header>
+      <!-- Navbar section -->
+      <section class="navbar-section">
+        <div class="container mx-auto">
+          <div class="navbar bg-neutral-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-xl"
+                ><span
+                  class="text-2xl font-extrabold text-gray-900 md:text-4xl lg:text-5xl"
+                  >news</span
+                ><span
+                  class="text-xl font-semibold md:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+                  >247</span
+                ></a
+              >
+            </div>
+            <div class="flex-none gap-2">
+              <div class="form-control">
+                <label class="">
+                  <button
+                    class="btn btn-active btn-link font-bold"
+                    onclick="handlerOnClickNewsBtn()"
+                  >
+                    News
+                  </button>
+                  <button class="btn btn-link text-neutral-400 font-bold">
+                    Blog
+                  </button>
+                </label>
+              </div>
+
+              <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                  <img src="https://placeimg.com/80/80/people" />
+                </div>
+              </label>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- Spinner Section -->
+      <section id="spinner-section" class="hidden">
+        <div class="spinner-container mb-20">
+          <div class="text-center 2 h-10 flex items-center justify-center">
+            <div role="status">
+              <svg
+                class="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                viewBox="0 0 100 101"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentFill"
+                />
+              </svg>
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accordion Section for Blog Posts -->
+      <section class="accordion-section">
+        <div class="mx-8 mt-16">
+          <div class="space-y-4">
+            <!-- Question 1 -->
+            <details class="group" open>
+              <summary
+                class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+              >
+                <h5 class="font-medium text-gray-900">
+                    What are the differences between var, let and const keywords in JavaScript?
+                </h5>
+
+                <svg
+                  class="flex-shrink-0 ml-1.5 w-5 h-5 transition duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+
+              <p class="px-4 mt-4 leading-relaxed text-gray-700">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
+                veritatis molestias culpa in, recusandae laboriosam neque
+                aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                consequuntur distinctio corporis earum similique!
+              </p>
+            </details>
+
+            <!-- Question 2 -->
+            <details class="group">
+              <summary
+                class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+              >
+                <h5 class="font-medium text-gray-900">
+                    What are the differences between arrow functions() and regular functions()?
+                </h5>
+
+                <svg
+                  class="flex-shrink-0 ml-1.5 w-5 h-5 transition duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+
+              <p class="px-4 mt-4 leading-relaxed text-gray-700">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
+                veritatis molestias culpa in, recusandae laboriosam neque
+                aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                consequuntur distinctio corporis earum similique!
+              </p>
+            </details>
+
+            <!-- Question 3 -->
+            <details class="group">
+              <summary
+                class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+              >
+                <h5 class="font-medium text-gray-900">
+                    What are the differences between .forEach(), .map(), .filter(), .reduce() and .find() method?
+                </h5>
+
+                <svg
+                  class="flex-shrink-0 ml-1.5 w-5 h-5 transition duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+
+              <p class="px-4 mt-4 leading-relaxed text-gray-700">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
+                veritatis molestias culpa in, recusandae laboriosam neque
+                aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                consequuntur distinctio corporis earum similique!
+              </p>
+            </details>
+
+            <!-- Question 4 -->
+            <details class="group">
+              <summary
+                class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+              >
+                <h5 class="font-medium text-gray-900">
+                    Why should we use template literals?
+                </h5>
+
+                <svg
+                  class="flex-shrink-0 ml-1.5 w-5 h-5 transition duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+
+              <p class="px-4 mt-4 leading-relaxed text-gray-700">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
+                veritatis molestias culpa in, recusandae laboriosam neque
+                aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                consequuntur distinctio corporis earum similique!
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- footer section -->
+      <section class="footer-section mt-16">
+        <div class="footer-container">
+          <div
+            class="footer footer-center p-10 bg-base-200 text-base-content rounded bg-white shadow-xl"
+          >
+            <div class="grid grid-flow-col gap-4">
+              <a class="link link-hover">About us</a>
+              <a class="link link-hover">Contact</a>
+              <a class="link link-hover">Jobs</a>
+              <a class="link link-hover">Press kit</a>
+            </div>
+            <div>
+              <div class="grid grid-flow-col gap-4">
+                <a
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-current"
+                  >
+                    <path
+                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                    ></path></svg
+                ></a>
+                <a
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-current"
+                  >
+                    <path
+                      d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                    ></path></svg
+                ></a>
+                <a
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-current"
+                  >
+                    <path
+                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                    ></path></svg
+                ></a>
+              </div>
+            </div>
+            <div>
+              <p>Copyright © 2022</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- daisyui JS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fowbite JS -->
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+    <!-- Javascript -->
+    <script>
+      const handlerOnClickNewsBtn = () => {
+        console.log('news');
+        window.location.href = 'index.html';
+      };
+    </script>
+  </body>
+</html>
