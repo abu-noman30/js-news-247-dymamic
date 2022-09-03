@@ -137,7 +137,7 @@ const displayCatagoryWiseNews = (newsData, category_name) => {
             />
           </div>
           <button class="text-indigo-500 ml-5 md:ml-0">
-          <label for="my-modal-3" class="btn text-indigo-500 bg-white border-0 hover:bg-white"> <i class="fa-solid fa-arrow-right"></i></label>
+          <label for="my-modal-3" class="btn text-indigo-500 bg-white border-0 hover:bg-white text-3xl"> <i class="fa-solid fa-arrow-right"></i></label>
            
           </button>
         </div>
