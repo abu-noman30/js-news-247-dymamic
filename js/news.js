@@ -23,22 +23,32 @@ const displaymenuItems = (menuItemsData) => {
   });
 };
 
-const fetchNewsData = async (category_id,category_name) => {
+const fetchNewsData = async (category_id, category_name) => {
   try {
     let url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     let res = await fetch(url);
     let data = await res.json();
-    displayCatagoryWiseNews(data.data,category_name);
+    displayCatagoryWiseNews(data.data, category_name);
   } catch (error) {
     console.log(error.stack);
   }
 };
 
-const displayCatagoryWiseNews = (newsData,category_name) => {
-    // console.log(newsData);
-    // console.log(category_name);
-    document.querySelector('#item-counter').innerHTML = `${newsData.length}`;
-    document.querySelector('#catagory-name').innerHTML = `${category_name}`;
+const displayCatagoryWiseNews = (newsData, category_name) => {
+  // console.log(newsData);
+  // console.log(newsData[0].total_view);
+  // console.log(category_name);
+
+  // Default News Data sort by total_view
+  if (newsData.length === 26 && category_name === 'All News') {
+    newsData.sort((a, b) => {
+      return b.total_view - a.total_view;
+    });
+    console.log(newsData);
+  }
+
+  document.querySelector('#item-counter').innerHTML = `${newsData.length}`;
+  document.querySelector('#catagory-name').innerHTML = `${category_name}`;
 
   const targetNotFoundSec = document.querySelector('#not-found-section');
   const targetNewsContainer = document.querySelector('#news-container');
@@ -54,13 +64,13 @@ const displayCatagoryWiseNews = (newsData,category_name) => {
       _id,
       title,
       total_view,
-      author: { name, published_date,img },
+      author: { name, published_date, img },
       thumbnail_url,
       details,
     } = news;
 
     const newsDiv = document.createElement('div');
-      newsDiv.innerHTML = `<!-- card-news-1 -->
+    newsDiv.innerHTML = `<!-- card-news-1 -->
       
     <div class="card lg:card-side bg-base-100 shadow-xl my-6 p-4" onclick='fetchNewsDetailsData("${_id}")'>
     
@@ -146,11 +156,17 @@ const fetchNewsDetailsData = async (news_id) => {
 };
 
 const displayNewsDetailsOnModal = (newsDetailsData) => {
-    console.log(newsDetailsData);
-    const { title, thumbnail_url, details, author: { name, published_date }, total_view } = newsDetailsData;
-    
-    const targetModalBody = document.querySelector('#modal-body');
-    targetModalBody.innerHTML = `<div class="card card-compact w-full p-4 bg-base-100 shadow-xl">
+  console.log(newsDetailsData);
+  const {
+    title,
+    thumbnail_url,
+    details,
+    author: { name, published_date },
+    total_view,
+  } = newsDetailsData;
+
+  const targetModalBody = document.querySelector('#modal-body');
+  targetModalBody.innerHTML = `<div class="card card-compact w-full p-4 bg-base-100 shadow-xl">
     <figure>
       <img src="${thumbnail_url}" alt="Shoes" class="rounded-lg h-48 min-w-full object-fill md:h-80 lg:h-full" />
     </figure>
@@ -164,16 +180,22 @@ const displayNewsDetailsOnModal = (newsDetailsData) => {
         <div>
         <p class="text-xs">${name ? name : 'No-Author'}</p>
         <p class="text-xs">${
-            published_date ? published_date.slice(0, 10) : 'Not-Available'
-          }</p>
+          published_date ? published_date.slice(0, 10) : 'Not-Available'
+        }</p>
         </div>
-        <div><p class="text-xs" >View: ${total_view ? total_view : '00'}</p></div>
+        <div><p class="text-xs" >View: ${
+          total_view ? total_view : '00'
+        }</p></div>
       </div>
     </div>
   </div>`;
-
-
-    
 };
 
-fetchMenuItemsData();
+const defaultNewsDataBySort = (categoryId, categoryName) => {
+  console.log(categoryId, categoryName);
+  fetchNewsData(categoryId, categoryName);
+};
+
+fetchMenuItemsData('');
+
+defaultNewsDataBySort('08', 'All News');
