@@ -25,7 +25,7 @@ const displaymenuItems = (menuItemsData) => {
   });
 };
 
-const fetchNewsData = async (category_id, category_name) => {
+const fetchNewsData = async (category_id ,category_name) => {
   document.querySelector('#spinner-section').classList.remove('hidden');
   try {
     let url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
@@ -85,9 +85,9 @@ const displayCatagoryWiseNews = (newsData, category_name) => {
           class="rounded-lg h-48 min-w-full object-fill md:h-80 lg:h-full"
         />
       </figure>
-      <div class="card-body">
-        <h2 class="card-title">${title}</h2>
-        <p class="text-neutral-400">${
+      <div class="card-body text-center md:text-left">
+        <h2 class="card-title text-xl font-bold md:text-2xl md:font-extrabold">${title}</h2>
+        <p class="text-neutral-400 text-sm sm:text-normal">${
           details.length > 200 ? details.slice(0, 200) + '...' : details
         }</p>
         <div class=" flex flex-wrap justify-center sm:justify-between items-center text-center">
@@ -198,7 +198,7 @@ const displayNewsDetailsOnModal = (newsDetailsData) => {
 };
 
 const defaultNewsDataBySort = (categoryId, categoryName) => {
-  console.log(categoryId, categoryName);
+  // console.log(categoryId, categoryName);
   fetchNewsData(categoryId, categoryName);
 };
 
